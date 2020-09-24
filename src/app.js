@@ -1,5 +1,4 @@
 import http from 'http'
-import path from 'path'
 import { env, mongo, port, ip, apiRoot } from './config'
 import mongoose from './services/mongoose'
 import express from './services/express'
@@ -14,10 +13,6 @@ mongoose.connect(mongo.uri, {
   useCreateIndex: true
 });
 mongoose.Promise = Promise;
-
-app.get('/docs', function(req, res) {
-  res.sendFile(path.join(process.cwd() + '/docs'));
-});
 
 setImmediate(() => {
   server.listen(port, ip, () => {
