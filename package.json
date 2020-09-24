@@ -4,9 +4,9 @@
   "main": "src",
   "private": true,
   "scripts": {
-    "start": "nodemon .",
-    "dev": "nodemon -i .",
-    "prod": "cross-env NODE_ENV=production nodemon .",
+    "start": "node .",
+    "dev": "cross-env NODE_ENV=development && nodemon",
+    "prod": "cross-env NODE_ENV=production node .",
     "docs": "apidoc -i src -o docs",
     "docs-deploy": "surge -p ./docs/ -d apidocs-churras-trinca.surge.sh"
   },
