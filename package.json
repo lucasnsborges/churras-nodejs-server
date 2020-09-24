@@ -1,0 +1,40 @@
+{
+  "name": "api-churras-trinca",
+  "version": "0.0.1",
+  "main": "src",
+  "private": true,
+  "scripts": {
+    "start": "nodemon .",
+    "dev": "nodemon -i .",
+    "prod": "cross-env NODE_ENV=production nodemon .",
+    "docs": "apidoc -i src -o docs",
+    "docs-deploy": "surge -p ./docs/ -d apidocs-churras-trinca.surge.sh"
+  },
+  "devDependencies": {
+    "apidoc": "^0.17.7",
+    "cross-env": "^6.0.3",
+    "dotenv-safe": "^8.1.0",
+    "nodemon": "^1.10.2",
+    "open-cli": "^5.0.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "bcrypt": "^3.0.6",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^5.1.0",
+    "morgan": "^1.7.0",
+    "passport": "^0.4.0",
+    "passport-http": "^0.3.0",
+    "passport-jwt": "^3.0.0",
+    "surge": "^0.21.6"
+  }
+}
